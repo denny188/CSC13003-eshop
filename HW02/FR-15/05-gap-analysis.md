@@ -1,44 +1,40 @@
 # Phân tích Khoảng trống AI (AI Gap Analysis): FR-15 (Quản lý Sản phẩm)
 
-> **Lưu ý:** Báo cáo này do **sinh viên trực tiếp sở hữu, đánh giá và hoàn thiện** nhằm đáp ứng mục tiêu chuẩn đầu ra Bloom-AI cấp độ G9.3 (Phân tích & Phản biện).
+Báo cáo phân tích và phản biện năng lực AI trong quá trình kiểm thử tính năng CRUD sản phẩm FR-15, đáp ứng chuẩn đầu ra Bloom-AI cấp độ G9.3 (Phân tích & Đánh giá).
 
 ---
 
 ## 1. Các Ca Kiểm thử mà AI bỏ sót ban đầu (Missed Test Cases)
-*(Đánh giá xem trong quá trình AI phân tích chức năng CRUD sản phẩm ở Step 2 & Step 3 có bỏ qua khía cạnh nào không?)*
 
-- **Ca kiểm thử 1 (Gợi ý):** Kiểm tra tính hợp lệ của định dạng URL hình ảnh (`imageUrl` format validation): Nhập chuỗi không phải URL (ví dụ: `ftp://...`, chuỗi văn bản linh tinh, hoặc đường dẫn file nội bộ) xem hệ thống có kiểm tra định dạng và hiển thị ảnh bị lỗi không.
-- **Ca kiểm thử 2 (Gợi ý):** Kiểm tra xóa sản phẩm khi đang có trong Giỏ hàng hoặc Đơn hàng (Integrity & Constraint check): Xóa sản phẩm $P$ rồi kiểm tra xem giỏ hàng của User hoặc đơn hàng lịch sử có bị crash hay mất dữ liệu không.
-- **Ca kiểm thử bổ sung của sinh viên:**
-  - *[Sinh viên bổ sung thêm các case phát hiện được]*
+1. **Kiểm tra định dạng và tính hợp lệ của đường dẫn ảnh (`imageUrl` format validation):**
+   - *Mô tả:* Nhập chuỗi ký tự không phải URL (ví dụ: chuỗi văn bản thuần túy, giao thức không an toàn, hoặc đường dẫn file hệ điều hành) để xem hệ thống có kiểm tra định dạng URL trước khi lưu và hiển thị hình ảnh có bị vỡ giao diện hay không.
+   - *Đánh giá:* AI ban đầu chỉ tập trung vào 3 biến bắt buộc trong đặc tả (`name`, `price`, `category_id`) mà xem nhẹ các trường tùy chọn như `imageUrl` và `description`.
+2. **Kiểm tra ràng buộc toàn vẹn khi xóa sản phẩm (Referential Integrity Check):**
+   - *Mô tả:* Thực hiện xóa một sản phẩm đang nằm trong giỏ hàng của người dùng hoặc đã có trong chi tiết của một đơn hàng lịch sử, kiểm tra xem CSDL có bị lỗi xung đột khóa ngoại hoặc gây crash trang người dùng hay không.
 
 ---
 
 ## 2. Các Lỗi (Bugs) mà AI có thể đã bỏ sót nếu chỉ nhìn ở một tầng
-*(Đánh giá các khuyết tật mà AI có thể bị khuất tầm nhìn nếu không kiểm thử đa tầng)*
 
-- **Lỗi bỏ sót tiềm ẩn (Gợi ý):**
-  - **Lỗi Frontend đột biến mảng `fakeMassUpdatedProducts` (`BUG-FR15-05`):** Nếu AI chỉ chạy API test qua cURL/Postman mà không đọc mã nguồn hoặc test trực tiếp trên Web Admin, lỗi này sẽ hoàn toàn bị bỏ lọt! Bởi vì trên API backend chỉ cập nhật đúng 1 bản ghi `UPDATE products SET ... WHERE id = ?`, nhưng chính code JavaScript phía Frontend React lại cố tình `products.map(p => ({ ...p, name: productForm.name }))` làm hỏng giao diện Admin.
-  - **Lỗi toàn bộ API CRUD không có bảo vệ xác thực (`BUG-FR15-06`):** Nếu chỉ thao tác trên giao diện Admin (nơi đã đăng nhập sẵn), người kiểm thử sẽ lầm tưởng các API này an toàn, mà không nhận ra các route này hoàn toàn là public API, cho phép bất kỳ ai gửi request sửa/xóa cơ sở dữ liệu.
-- **Lỗi bổ sung của sinh viên:**
-  - *[Sinh viên ghi nhận thêm]*
+1. **Lỗi đột biến State hàng loạt trên giao diện Web Admin (`BUG-FR15-05`):**
+   - *Phân tích:* Đây là lỗi nguy hiểm nhất trong SUT. Nếu người kiểm thử chỉ chạy kiểm thử API bằng cURL/Postman hoặc viết test script tự động trên backend, API `PUT /api/products/:id` hoạt động hoàn toàn chính xác (chỉ cập nhật đúng 1 dòng trong SQLite). Tuy nhiên, trên giao diện Web Admin, đoạn mã React cố tình sử dụng `fakeMassUpdatedProducts = products.map(...)` khiến toàn bộ danh sách sản phẩm hiển thị trên màn hình đều bị đổi tên theo! Lỗi này hoàn toàn bị bỏ lọt nếu chỉ kiểm thử đơn tầng ở backend.
+2. **Lỗi các API CRUD sản phẩm hoàn toàn mở cho công chúng (`BUG-FR15-06`):**
+   - *Phân tích:* Khi kiểm thử thủ công trên Web Admin, do người dùng đã đăng nhập tài khoản Admin từ trước nên các thao tác Thêm/Sửa/Xóa đều diễn ra trơn tru. Chỉ khi bóc tách kiểm thử độc lập ở tầng API và cố tình loại bỏ Header `Authorization`, ta mới phát hiện toàn bộ các route quản trị sản phẩm không hề có bất kỳ lớp bảo vệ nào.
 
 ---
 
 ## 3. Lý do AI bỏ sót hoặc có hạn chế (Why the AI Missed It)
 
 1. **Chất lượng câu lệnh (Prompt Quality):**
-   - Nếu prompt không nhắc đến việc soi chiếu giữa hành vi State của Client React và Database Backend, AI sẽ có xu hướng chỉ tập trung vào tầng API mà bỏ quên các lỗi logic giao diện (UI state side effects).
-2. **Hạn chế của công cụ AI (Tool Limitations):**
-   - AI chỉ là mô hình ngôn ngữ tĩnh. Nếu không có khả năng đọc sâu từng dòng mã nguồn Frontend (`App.jsx`) và đồng thời kiểm tra backend (`server.js`), AI không thể tự động phát hiện được sự không đồng nhất giữa dữ liệu thực tế trong SQLite và dữ liệu hiển thị trên state React.
-3. **Độ phức tạp và bẫy lỗi có chủ đích (Seeded Bugs):**
-   - SUT có các lỗi được cài cắm tinh vi (như `fakeMassUpdatedProducts`), đòi hỏi người kiểm thử phải bám sát câu chữ của đặc tả (*"Khi Sửa một sản phẩm, chỉ sản phẩm đó bị thay đổi — các sản phẩm khác giữ nguyên"*) để kiểm tra chéo các sản phẩm không liên quan.
+   - Nếu câu lệnh không yêu cầu kiểm tra chéo tác động phụ giữa Client State và Database State, AI thường sẽ xem nhẹ việc kiểm tra giao diện sau khi API trả về kết quả thành công.
+2. **Hạn chế cố hữu của công cụ AI (Tool Limitations):**
+   - AI LLM không tự giác chạy đồng thời cả giao diện Frontend và backend API trừ khi được người hướng dẫn định hình phương pháp kiểm thử toàn diện (End-to-End Multilayer Testing).
+3. **Đặc thù của các bẫy lỗi cài cắm (Seeded Bugs):**
+   - Những bẫy lỗi như `fakeMassUpdatedProducts` được thiết kế có chủ đích nhằm đánh lừa các công cụ kiểm thử tự động chỉ kiểm tra mã phản hồi HTTP 200 mà không kiểm tra trạng thái của các đối tượng xung quanh.
 
 ---
 
 ## 4. Những điều chỉnh của Sinh viên sau khi Review (What I Changed After Review)
-*(Sinh viên tóm tắt các điểm bản thân đã can thiệp, phản biện hoặc điều chỉnh kết quả của AI)*
 
-- Nhắc nhở AI chú trọng kiểm tra thuộc tính Update Isolation giữa các sản phẩm.
-- Chỉ đạo kiểm tra các route API trực tiếp mà không kèm header Authorization để phát hiện triệt để lỗ hổng thiếu middleware xác thực.
-- *[Sinh viên bổ sung thêm các nhận xét/chỉnh sửa của bản thân]*
+- **Nhấn mạnh yêu cầu Update Isolation:** Trực tiếp yêu cầu AI thiết kế ca kiểm thử `TC-FR15-DT-011` để kiểm tra thông tin của các sản phẩm lân cận khi sửa một sản phẩm bất kỳ, từ đó phát hiện thành công lỗi `BUG-FR15-05`.
+- **Kiểm tra tính an toàn của API CRUD:** Yêu cầu gửi request không kèm token và request với token người dùng thường để phát hiện lỗ hổng thiếu middleware xác thực `BUG-FR15-06`.
