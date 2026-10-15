@@ -12,4 +12,5 @@ Tài liệu này tổng hợp lịch sử các bước tương tác AI xuyên su
 | 2026-10-15 14:32 | FR-03 | Step 6 (Bug Reports) | [HW02/ai-audit/20261015-1432-FR-03-step6.md](file:///d:/Downloads/CSC13003-eshop/HW02/ai-audit/20261015-1432-FR-03-step6.md) | Đã duyệt (Approved) |
 | 2026-10-15 14:36 | FR-10 | Step 1 (Analysis) | [HW02/ai-audit/20261015-1436-FR-10-step1.md](file:///d:/Downloads/CSC13003-eshop/HW02/ai-audit/20261015-1436-FR-10-step1.md) | Đã duyệt (Approved) |
 | 2026-10-15 14:39 | FR-10 | Step 2 (Domain Testing) | [HW02/ai-audit/20261015-1439-FR-10-step2.md](file:///d:/Downloads/CSC13003-eshop/HW02/ai-audit/20261015-1439-FR-10-step2.md) | Đã duyệt (Approved) |
-| 2026-10-15 14:41 | FR-10 | Step 3 (BVA Testing) | [HW02/ai-audit/20261015-1441-FR-10-step3.md](file:///d:/Downloads/CSC13003-eshop/HW02/ai-audit/20261015-1441-FR-10-step3.md) | Chờ SV duyệt |
+| 2026-10-15 14:41 | FR-10 | Step 3 (BVA Testing) | [HW02/ai-audit/20261015-1441-FR-10-step3.md](file:///d:/Downloads/CSC13003-eshop/HW02/ai-audit/20261015-1441-FR-10-step3.md) | Đã duyệt (Approved) |
+| 2026-10-15 14:45 | FR-10 | Step 4 (Execution) | [HW02/ai-audit/20261015-1445-FR-10-step4.md](file:///d:/Downloads/CSC13003-eshop/HW02/ai-audit/20261015-1445-FR-10-step4.md) | Chờ SV duyệt |
