@@ -20,4 +20,5 @@ Tài liệu này tổng hợp lịch sử các bước tương tác AI xuyên su
 | 2026-10-15 14:56 | FR-15 | Step 2 (Domain Testing) | [HW02/ai-audit/20261015-1456-FR-15-step2.md](file:///d:/Downloads/CSC13003-eshop/HW02/ai-audit/20261015-1456-FR-15-step2.md) | Đã duyệt (Approved) |
 | 2026-10-15 14:57 | FR-15 | Step 3 (BVA Testing) | [HW02/ai-audit/20261015-1457-FR-15-step3.md](file:///d:/Downloads/CSC13003-eshop/HW02/ai-audit/20261015-1457-FR-15-step3.md) | Đã duyệt (Approved) |
 | 2026-10-15 15:00 | FR-15 | Step 4 (Execution) | [HW02/ai-audit/20261015-1500-FR-15-step4.md](file:///d:/Downloads/CSC13003-eshop/HW02/ai-audit/20261015-1500-FR-15-step4.md) | Đã duyệt (Approved) |
-| 2026-10-15 15:02 | FR-15 | Step 5 (AI Gap Analysis) | [HW02/ai-audit/20261015-1502-FR-15-step5.md](file:///d:/Downloads/CSC13003-eshop/HW02/ai-audit/20261015-1502-FR-15-step5.md) | Chờ SV duyệt |
+| 2026-10-15 15:02 | FR-15 | Step 5 (AI Gap Analysis) | [HW02/ai-audit/20261015-1502-FR-15-step5.md](file:///d:/Downloads/CSC13003-eshop/HW02/ai-audit/20261015-1502-FR-15-step5.md) | Đã duyệt (Approved) |
+| 2026-10-15 15:07 | FR-15 | Step 6 (Bug Reports) | [HW02/ai-audit/20261015-1507-FR-15-step6.md](file:///d:/Downloads/CSC13003-eshop/HW02/ai-audit/20261015-1507-FR-15-step6.md) | Chờ SV duyệt |
