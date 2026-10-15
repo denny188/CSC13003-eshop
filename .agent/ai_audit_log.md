@@ -1,0 +1,9 @@
+# AI Audit Master Log
+
+Tài liệu này tổng hợp lịch sử các bước tương tác AI xuyên suốt quá trình thực hiện đồ án HW02.
+
+| Thời gian | Feature | Bước | File log chi tiết | Trạng thái Review của SV |
+| :--- | :--- | :--- | :--- | :--- |
+| 2026-10-15 14:05 | FR-03 | Step 1 (Analysis) | [HW02/ai-audit/20261015-1405-FR-03-step1.md](file:///d:/Downloads/CSC13003-eshop/HW02/ai-audit/20261015-1405-FR-03-step1.md) | Đã duyệt (Approved) |
+| 2026-10-15 14:07 | FR-03 | Step 2 (Domain Testing) | [HW02/ai-audit/20261015-1407-FR-03-step2.md](file:///d:/Downloads/CSC13003-eshop/HW02/ai-audit/20261015-1407-FR-03-step2.md) | Đã duyệt (Approved) |
+| 2026-10-15 14:09 | FR-03 | Step 3 (BVA Testing) | [HW02/ai-audit/20261015-1409-FR-03-step3.md](file:///d:/Downloads/CSC13003-eshop/HW02/ai-audit/20261015-1409-FR-03-step3.md) | Chờ SV duyệt |

@@ -1,0 +1,101 @@
+{
+  "student": {
+    "name": "Nguyễn Lê Hữu Điền",
+    "student_id": "23120233",
+    "branch": "hw02-23120233",
+    "report_language": "vi"
+  },
+  "sut": {
+    "repo": "https://github.com/ttbhanh/eshop-sut",
+    "backend": "http://localhost:3000",
+    "web": "http://localhost:5173",
+    "admin": "http://localhost:5174",
+    "mobile": "React Native + Expo",
+    "accounts": {
+      "admin": "admin@eshop.com / Admin123!",
+      "user": "test@eshop.com / Test1234!"
+    },
+    "spec_files": ["README.md", "api_specification.md"]
+  },
+  "techniques": ["domain_testing", "boundary_value_analysis"],
+  "features": [
+    {
+      "pool": "A",
+      "fr": "FR-03",
+      "name": "Quên mật khẩu & Đặt lại mật khẩu (2 bước)",
+      "platform": "web",
+      "spec": [
+        "Bước 1: nhập Email đã đăng ký; hệ thống sinh OTP 6 chữ số ngẫu nhiên (demo: hiển thị trên màn hình); có Step Indicator (Bước 1/2); có nút Quay lại đăng nhập.",
+        "Bước 2: nhập OTP, Mật khẩu mới, Xác nhận mật khẩu mới; mật khẩu mới theo điều kiện FR-01 (>=8 ký tự, có chữ hoa, chữ thường, chữ số, ký tự đặc biệt trong @ $ ! % * ? &); hai trường mật khẩu phải khớp; OTP chỉ hợp lệ cho email đã yêu cầu.",
+        "SEC-07: OTP tối thiểu 6 chữ số, có thời hạn, vô hiệu hóa sau khi dùng."
+      ],
+      "hints": [
+        "Password length 7/8/9; remove each character class in turn; special char outside the allowed set",
+        "OTP 5/6/7 digits, non-numeric, leading zero, reuse after success, OTP of another email",
+        "Email: unregistered, invalid format, empty, uppercase/lowercase variants"
+      ]
+    },
+    {
+      "pool": "B",
+      "fr": "FR-10",
+      "name": "Trạng thái đơn hàng (Order state machine)",
+      "platform": "web/api",
+      "spec": [
+        "5 trạng thái: pending, confirmed, shipping, delivered, canceled.",
+        "Chuyển hợp lệ: pending->confirmed (Admin), confirmed->shipping (Admin), shipping->delivered (Admin), pending->canceled (User/Admin), confirmed->canceled (User/Admin).",
+        "delivered và canceled là trạng thái kết thúc, không chuyển sang trạng thái nào khác.",
+        "Khi đơn ở shipping, User không được tự hủy, chỉ Admin thao tác.",
+        "Mọi chuyển đổi không hợp lệ phải trả lỗi với thông báo phù hợp."
+      ],
+      "hints": [
+        "Treat status as an enumerated domain: build the full 5x5 transition matrix (valid vs invalid)",
+        "Second dimension: actor (user vs admin) and ownership (other user's order)",
+        "Prefer API-level testing; UI will not expose invalid transitions"
+      ]
+    },
+    {
+      "pool": "C",
+      "fr": "FR-15",
+      "name": "Quản lý sản phẩm (Product CRUD)",
+      "platform": "web-admin",
+      "spec": [
+        "Admin có thể Thêm / Xem / Sửa / Xóa sản phẩm.",
+        "Tên sản phẩm: bắt buộc, tối đa 255 ký tự.",
+        "Giá: bắt buộc, số dương (> 0).",
+        "Danh mục: bắt buộc, chọn từ danh sách có sẵn.",
+        "Khi Sửa, chỉ sản phẩm đó thay đổi; các sản phẩm khác giữ nguyên."
+      ],
+      "hints": [
+        "Name length 0/1/254/255/256, whitespace-only, special chars/HTML",
+        "Price 0, 0.01, -1, very large, non-numeric, decimal separators",
+        "Category missing / non-existent id; edit affects only target product; non-admin access"
+      ]
+    },
+    {
+      "pool": "D",
+      "fr": "FR-16 (candidate, NOT confirmed)",
+      "name": "Import sản phẩm từ CSV, test trên mobile",
+      "platform": "mobile",
+      "status": "pending: confirm the mobile app actually has this screen, otherwise ask the lecturer on the Moodle forum and update this entry",
+      "spec": [
+        "File phải có đuôi .csv; dòng đầu là header: name,price,description,imageUrl,category_id; hỗ trợ trường chứa dấu phẩy nếu bọc trong dấu nháy kép (RFC 4180).",
+        "Validation: name không rỗng; price là số dương.",
+        "Lỗi ở bất kỳ dòng nào thì rollback toàn bộ (all-or-nothing).",
+        "Báo cáo rõ số dòng thành công, số dòng lỗi và lý do."
+      ],
+      "hints": [
+        "Extension .csv vs .txt/.xlsx; missing/misordered header; empty file; header only",
+        "Price 0/0.01/-1/abc; empty name; quoted comma; 1 bad row among many => nothing imported"
+      ]
+    }
+  ],
+  "deliverables": [
+    "Main report (Markdown + PDF) with Domain Testing and BVA reports",
+    "Bug report with GitHub Issues screenshots",
+    "AI Critique (200-300 words) and AI Audit Report (Markdown + PDF)",
+    "Git commit log (text file)",
+    "README.md with self-assessment table and test summary (features, designed/executed/passed/failed/not executed, bugs, demo videos)",
+    "Agent skill + YouTube demo video",
+    "Zip: 23120233_HW02_AI_DomainTesting_<SelfAssessedGrade>.zip"
+  ]
+}
