@@ -79,9 +79,8 @@ Toàn bộ 28 lỗi phát hiện được đã được tự động đăng lên
 
 ---
 
-## 4. Video Demo & Liên kết Hỗ trợ
+## 4. Cấu trúc Thư mục Nộp bài (Submission Structure)
 
-- **Link YouTube Demo:** *(Sẽ được cập nhật sau khi quay video)*
 - **Cấu trúc lưu trữ thư mục `HW02/`:**
   - `HW02/FR-03/`: Bộ 5 file kiểm thử tính năng Quên mật khẩu.
   - `HW02/FR-10/`: Bộ 5 file kiểm thử Order State Machine.
