@@ -34,3 +34,6 @@ Thêm thành phần hiển thị bước (ví dụ: `<div className="text-sm tex
   ← Quay lại đăng nhập
 </Link>
 ```
+
+---
+- **GitHub Issue Link:** [Issue #3](https://github.com/denny188/CSC13003-eshop/issues/3)

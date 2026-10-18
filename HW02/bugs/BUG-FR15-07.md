@@ -40,3 +40,6 @@ if (name.length > 255) {
 }
 ```
 Và trên input Form Web Admin thêm `maxLength={255}`.
+
+---
+- **GitHub Issue Link:** [Issue #17](https://github.com/denny188/CSC13003-eshop/issues/17)

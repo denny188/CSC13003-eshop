@@ -53,3 +53,6 @@ Thêm thẻ `<Image>` minh họa giỏ hàng trống vào component:
   </TouchableOpacity>
 </View>
 ```
+
+---
+- **GitHub Issue Link:** [Issue #27](https://github.com/denny188/CSC13003-eshop/issues/27)

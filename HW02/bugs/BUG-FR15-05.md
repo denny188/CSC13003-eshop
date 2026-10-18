@@ -43,3 +43,6 @@ if (productForm.id) {
   alert("Cập nhật thành công!");
 }
 ```
+
+---
+- **GitHub Issue Link:** [Issue #15](https://github.com/denny188/CSC13003-eshop/issues/15)

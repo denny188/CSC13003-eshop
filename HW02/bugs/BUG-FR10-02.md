@@ -40,3 +40,6 @@ Theo đặc tả nghiệp vụ FR-10, `canceled` (đã hủy) và `delivered` (�
 
 ### 5. Đề xuất khắc phục (Recommendation)
 Xóa bỏ dòng điều kiện sai lệch này trong `backend/server.js:550-551`. Khi `currentStatus` là `canceled` hoặc `delivered`, không được gán `isValidTransition = true` cho bất kỳ `status` nào.
+
+---
+- **GitHub Issue Link:** [Issue #9](https://github.com/denny188/CSC13003-eshop/issues/9)

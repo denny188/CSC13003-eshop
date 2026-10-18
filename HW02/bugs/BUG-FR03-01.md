@@ -43,3 +43,6 @@ Sửa công thức sinh OTP thành chuỗi ngẫu nhiên 6 chữ số:
 const resetToken = Math.floor(100000 + Math.random() * 900000).toString();
 ```
 Đồng thời cập nhật lại label và placeholder trên giao diện Web thành "Mã OTP (6 số)".
+
+---
+- **GitHub Issue Link:** [Issue #1](https://github.com/denny188/CSC13003-eshop/issues/1)

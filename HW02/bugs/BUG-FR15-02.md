@@ -46,3 +46,6 @@ if (isNaN(numPrice) || numPrice <= 0) {
 }
 ```
 Đồng thời trên form Web Admin thêm thuộc tính `min="1"` vào thẻ `<input type="number">`.
+
+---
+- **GitHub Issue Link:** [Issue #12](https://github.com/denny188/CSC13003-eshop/issues/12)

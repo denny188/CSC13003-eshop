@@ -71,3 +71,6 @@ if (validationErrors.length > 0) {
 }
 ```
 2. Bao bọc toàn bộ thao tác thêm mới bằng Transaction của SQLite (`BEGIN TRANSACTION` và `ROLLBACK` khi có lỗi xảy ra).
+
+---
+- **GitHub Issue Link:** [Issue #21](https://github.com/denny188/CSC13003-eshop/issues/21)

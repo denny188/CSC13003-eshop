@@ -33,3 +33,6 @@ Sửa lại regex đúng theo yêu cầu FR-01:
 ```javascript
 const strongPasswordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
 ```
+
+---
+- **GitHub Issue Link:** [Issue #6](https://github.com/denny188/CSC13003-eshop/issues/6)

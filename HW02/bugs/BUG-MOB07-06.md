@@ -38,3 +38,6 @@ Sửa nhãn text thành:
 ```jsx
 <Text style={styles.buttonText}>Tiếp tục mua sắm</Text>
 ```
+
+---
+- **GitHub Issue Link:** [Issue #28](https://github.com/denny188/CSC13003-eshop/issues/28)

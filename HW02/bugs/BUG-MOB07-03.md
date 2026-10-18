@@ -64,3 +64,6 @@ const removeFromCart = (index) => {
   );
 };
 ```
+
+---
+- **GitHub Issue Link:** [Issue #25](https://github.com/denny188/CSC13003-eshop/issues/25)

@@ -37,3 +37,6 @@ if (!name || name.trim().length === 0) {
   return res.status(400).json({ error: "Tên sản phẩm là bắt buộc và không được để trống." });
 }
 ```
+
+---
+- **GitHub Issue Link:** [Issue #11](https://github.com/denny188/CSC13003-eshop/issues/11)

@@ -53,3 +53,6 @@ app.put("/api/admin/orders/:id/status", authenticateToken, requireAdmin, (req, r
   // Logic cập nhật
 });
 ```
+
+---
+- **GitHub Issue Link:** [Issue #10](https://github.com/denny188/CSC13003-eshop/issues/10)

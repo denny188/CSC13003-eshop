@@ -46,3 +46,6 @@ if (order.status !== 'pending' && order.status !== 'confirmed') {
   return res.status(400).json({ error: "Chỉ có thể hủy đơn hàng khi đang ở trạng thái chờ xử lý hoặc đã xác nhận." });
 }
 ```
+
+---
+- **GitHub Issue Link:** [Issue #8](https://github.com/denny188/CSC13003-eshop/issues/8)

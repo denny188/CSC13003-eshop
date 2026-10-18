@@ -49,3 +49,6 @@ Thêm `required` và `min="1"` vào thẻ input:
   ...
 />
 ```
+
+---
+- **GitHub Issue Link:** [Issue #13](https://github.com/denny188/CSC13003-eshop/issues/13)

@@ -71,3 +71,6 @@ if (row.name.length > 255) {
   return;
 }
 ```
+
+---
+- **GitHub Issue Link:** [Issue #20](https://github.com/denny188/CSC13003-eshop/issues/20)

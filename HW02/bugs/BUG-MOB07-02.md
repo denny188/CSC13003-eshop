@@ -48,3 +48,6 @@ onChangeText={(text) => {
   setCart(newCart);
 }}
 ```
+
+---
+- **GitHub Issue Link:** [Issue #24](https://github.com/denny188/CSC13003-eshop/issues/24)

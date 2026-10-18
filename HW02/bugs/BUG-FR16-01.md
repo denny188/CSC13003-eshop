@@ -62,3 +62,6 @@ Papa.parse(file, {
   },
 });
 ```
+
+---
+- **GitHub Issue Link:** [Issue #18](https://github.com/denny188/CSC13003-eshop/issues/18)

@@ -37,3 +37,6 @@ Sửa nhãn text thành "Tổng cộng":
   Tổng cộng: {formatMoney(cartTotal)}
 </Text>
 ```
+
+---
+- **GitHub Issue Link:** [Issue #26](https://github.com/denny188/CSC13003-eshop/issues/26)

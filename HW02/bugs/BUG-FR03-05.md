@@ -42,3 +42,6 @@ if (!passwordRegex.test(newPassword)) {
   return res.status(400).json({ error: "Mật khẩu không thỏa mãn chính sách bảo mật" });
 }
 ```
+
+---
+- **GitHub Issue Link:** [Issue #5](https://github.com/denny188/CSC13003-eshop/issues/5)

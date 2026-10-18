@@ -36,3 +36,6 @@
    db.run("PRAGMA foreign_keys = ON;");
    ```
 2. Kiểm tra `category_id` trong bảng `categories` trước khi insert hoặc bắt lỗi ngoại lệ khóa ngoại.
+
+---
+- **GitHub Issue Link:** [Issue #14](https://github.com/denny188/CSC13003-eshop/issues/14)

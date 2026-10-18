@@ -35,3 +35,6 @@ Tại trang Quên Mật Khẩu Bước 1, thẻ `<input>` dành cho trường Em
 
 ### 5. Đề xuất khắc phục (Recommendation)
 Đổi thuộc tính `type="text"` thành `type="email"`.
+
+---
+- **GitHub Issue Link:** [Issue #2](https://github.com/denny188/CSC13003-eshop/issues/2)

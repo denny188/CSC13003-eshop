@@ -56,3 +56,6 @@ const bcrypt = require('bcrypt');
 const hashedPassword = await bcrypt.hash(newPassword, 10);
 db.run("UPDATE users SET password = ?, reset_token = NULL ...", [hashedPassword, ...]);
 ```
+
+---
+- **GitHub Issue Link:** [Issue #4](https://github.com/denny188/CSC13003-eshop/issues/4)

@@ -63,3 +63,6 @@ app.post("/api/admin/import-products", authenticateToken, requireAdmin, (req, re
   // Logic xử lý import
 });
 ```
+
+---
+- **GitHub Issue Link:** [Issue #22](https://github.com/denny188/CSC13003-eshop/issues/22)

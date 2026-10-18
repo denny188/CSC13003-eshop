@@ -63,3 +63,6 @@ Bổ sung hai nút bấm `+` và `-` bao quanh ô số lượng và gắn hàm x
   </TouchableOpacity>
 </View>
 ```
+
+---
+- **GitHub Issue Link:** [Issue #23](https://github.com/denny188/CSC13003-eshop/issues/23)

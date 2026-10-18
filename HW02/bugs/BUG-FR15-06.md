@@ -53,3 +53,6 @@ app.post("/api/products", authenticateToken, requireAdmin, (req, res) => { ... }
 app.put("/api/products/:id", authenticateToken, requireAdmin, (req, res) => { ... });
 app.delete("/api/products/:id", authenticateToken, requireAdmin, (req, res) => { ... });
 ```
+
+---
+- **GitHub Issue Link:** [Issue #16](https://github.com/denny188/CSC13003-eshop/issues/16)
