@@ -1,0 +1,110 @@
+{
+  "exercise_id": "HW03-AI",
+  "title": "GUI & Usability Testing",
+  "student": {
+    "name": "Nguyễn Lê Hữu Điền",
+    "student_id": "23120233",
+    "email": "23120233@student.hcmus.edu.vn",
+    "github": "denny188",
+    "branch": "hw03-23120233",
+    "report_language": "vi"
+  },
+  "sut": {
+    "name": "EShop — Vietnamese E-Commerce Demo SUT",
+    "upstream_repo": "https://github.com/ttbhanh/eshop-sut",
+    "student_fork": "https://github.com/denny188/CSC13003-eshop",
+    "backend_url": "http://localhost:3000",
+    "web_url": "http://localhost:5173",
+    "admin_url": "http://localhost:5174",
+    "accounts": {
+      "admin": "admin@eshop.com / Admin123!",
+      "user": "test@eshop.com / Test1234!"
+    },
+    "spec_files": ["README.md", "api_specification.md"]
+  },
+  "interface_aspects": {
+    "IA-01": {
+      "name": "General UI standards",
+      "spec_ref": "FR-21",
+      "rules": [
+        "Language consistency: Entire UI in Vietnamese (except standard technical terms)",
+        "Color consistency: Positive/Submit actions use blue; Destructive/Cancel actions use red",
+        "Currency consistency: Always use '₫' with thousands separator",
+        "Page heading: Each page has exactly one <h1> tag describing page content",
+        "Tab order: Focus order via Tab key moves top-to-bottom, left-to-right"
+      ]
+    },
+    "IA-02": {
+      "name": "Forms",
+      "spec_ref": "FR-22",
+      "rules": [
+        "Required fields must have '*' symbol next to the label",
+        "Email input must use type='email'",
+        "Password input must use type='password' (masked)",
+        "Error messages must appear ABOVE the submit button, not below",
+        "Multi-step forms (>=2 steps) must have a clear Step Indicator"
+      ]
+    },
+    "IA-03": {
+      "name": "Navigation",
+      "spec_ref": "FR-23",
+      "rules": [
+        "Navbar must highlight the currently active page",
+        "Cart link must display a badge with the item count in cart",
+        "Logout button must be labeled 'Đăng xuất' (not 'Thoát')",
+        "Breadcrumbs are mandatory on sub-pages"
+      ]
+    },
+    "IA-04": {
+      "name": "Feedback / state",
+      "spec_ref": "FR-24",
+      "rules": [
+        "Visual feedback (toast/badge) after clicking 'Add to cart'",
+        "Confirmation dialog before deleting/canceling items",
+        "Empty state must include an icon/illustration and friendly message",
+        "All images must have descriptive non-empty alt attributes"
+      ]
+    }
+  },
+  "scope": {
+    "group_exclusion": {
+      "teammate": "Xuân Thu",
+      "teammate_task1_screens": ["FR-06 (Product Detail)", "FR-07 (Shopping Cart)", "FR-08 (Checkout)"],
+      "teammate_task2_flow": "Search -> Product Detail -> Cart -> Coupon -> Checkout"
+    },
+    "task1_screens": [
+      {
+        "id": "S1",
+        "name": "Đăng ký tài khoản (Account Registration)",
+        "route": "/register",
+        "component": "frontend-web/src/pages/Register.jsx",
+        "related_frs": ["FR-01", "FR-21", "FR-22", "FR-23", "FR-24"]
+      },
+      {
+        "id": "S2",
+        "name": "Đăng nhập & Quên mật khẩu (Login & Forgot Password)",
+        "route": "/login, /forgot-password",
+        "component": "frontend-web/src/pages/Login.jsx, frontend-web/src/pages/ForgotPassword.jsx",
+        "related_frs": ["FR-02", "FR-03", "FR-21", "FR-22", "FR-23", "FR-24"]
+      },
+      {
+        "id": "S3",
+        "name": "Hồ sơ cá nhân & Lịch sử đơn hàng (Profile & Order History)",
+        "route": "/profile",
+        "component": "frontend-web/src/pages/Profile.jsx",
+        "related_frs": ["FR-04", "FR-11", "FR-21", "FR-22", "FR-23", "FR-24"]
+      }
+    ],
+    "task2_usability": {
+      "flow_name": "Luồng người dùng mới tạo tài khoản -> cập nhật hồ sơ cá nhân -> kiểm tra lịch sử & trạng thái đơn hàng",
+      "scale": "SUS",
+      "participants_count": 7,
+      "pilot_count": 1
+    },
+    "task3_platforms": [
+      "Google Chrome (Desktop)",
+      "Mozilla Firefox (Desktop)",
+      "Apple Safari (macOS via BrowserStack / LambdaTest)"
+    ]
+  }
+}
