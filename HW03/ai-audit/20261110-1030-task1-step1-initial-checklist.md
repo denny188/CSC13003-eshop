@@ -1,7 +1,7 @@
 # AI Audit Log — Task 1 (Step 1.1): Initial AI-Generated GUI Checklist
 
 - **Declaration:** I use AI tools for the following tasks.
-- **Name of the AI tool:** Antigravity Agent (Gemini / Claude) with Skill `hw03-gui-checklist`
+- **Name of the AI tool:** Antigravity Agent (Gemini 4 Argon/ Claude Opus 5.5) with Skill `hw03-gui-checklist`
 - **Date and time:** 2026-11-10 10:30:00 +07:00
 - **Task / Step:** Task 1 — Step 1.1: Generate an initial 40-item GUI Checklist covering `IA-01`, `IA-02`, `IA-03`, and `IA-04` across Screens S1 (`/register`), S2 (`/login`, `/forgot-password`), and S3 (`/profile`).
 
