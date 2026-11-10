@@ -29,3 +29,6 @@
 ### 6. Đề xuất khắc phục (Recommendation)
 - Tại `Login.jsx:24`: Sửa thành `<h1 className="text-2xl font-bold mb-6 text-center">Đăng Nhập</h1>`.
 - Tại `Register.jsx:32`, `ForgotPassword.jsx:43`, và `Profile.jsx`: Sử dụng đúng 1 thẻ `<h1>` cho tiêu đề cấp trang.
+
+---
+- **GitHub Issue Link:** [Issue #31](https://github.com/denny188/CSC13003-eshop/issues/31)

@@ -29,3 +29,6 @@
 ### 6. Đề xuất khắc phục (Recommendation)
 - Thêm `<span className="text-red-500">*</span>` vào tất cả các nhãn của trường `required`.
 - Bổ sung cặp `htmlFor` / `id` và thuộc tính `autocomplete` tương ứng cho mọi trường biểu mẫu.
+
+---
+- **GitHub Issue Link:** [Issue #33](https://github.com/denny188/CSC13003-eshop/issues/33)

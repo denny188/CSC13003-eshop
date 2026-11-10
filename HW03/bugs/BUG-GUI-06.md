@@ -45,3 +45,6 @@ Tuy nhiên, trong mã nguồn thực tế:
 ### 6. Đề xuất khắc phục (Recommendation)
 - Đổi `type="text"` thành `type="password"` tại `Login.jsx:40`.
 - Đổi `type="text"` thành `type="email"` tại `Register.jsx:48`, `Login.jsx:30`, `ForgotPassword.jsx:50`, và `type="tel"` tại `Profile.jsx:139`.
+
+---
+- **GitHub Issue Link:** [Issue #34](https://github.com/denny188/CSC13003-eshop/issues/34)

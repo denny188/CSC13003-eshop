@@ -31,3 +31,6 @@
 
 ### 6. Đề xuất khắc phục (Recommendation)
 - Sử dụng `<NavLink>` trong `App.jsx`, render badge `{cart.length}`, đổi `"Thoát"` thành `"Đăng xuất"`, thay `dangerouslySetInnerHTML` bằng `<span className="truncate max-w-[180px]">Chào, {user.name}</span>`, và bổ sung component `Breadcrumb`.
+
+---
+- **GitHub Issue Link:** [Issue #36](https://github.com/denny188/CSC13003-eshop/issues/36)

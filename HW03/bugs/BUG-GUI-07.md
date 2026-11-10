@@ -32,3 +32,6 @@ Theo đặc tả `FR-22`: *"Thông báo lỗi phải xuất hiện trên nút su
 ### 6. Đề xuất khắc phục (Recommendation)
 - Di chuyển khối `{error && <div role="alert" ...>{error}</div>}` vào bên trong `<form>` ngay phía trên nút Submit.
 - Thay thế toàn bộ lệnh `alert()` trong `Profile.jsx` và `ForgotPassword.jsx` bằng state thông báo inline/toast.
+
+---
+- **GitHub Issue Link:** [Issue #35](https://github.com/denny188/CSC13003-eshop/issues/35)

@@ -29,3 +29,6 @@ Các kiểm tra mở rộng (do con người bổ sung trong bước AI Gap Revi
 
 ### 6. Đề xuất khắc phục (Recommendation)
 Bọc `<table>` trong `<div className="overflow-x-auto">`, thay `text-left`/`text-right` bằng `text-start`/`text-end`, và bổ sung state `isSubmitting` cho các biểu mẫu.
+
+---
+- **GitHub Issue Link:** [Issue #40](https://github.com/denny188/CSC13003-eshop/issues/40)

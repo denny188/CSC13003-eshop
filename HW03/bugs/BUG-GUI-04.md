@@ -34,3 +34,6 @@ Theo đặc tả `FR-21`: *"Tab Order: Thứ tự focus theo Tab phải đi từ
 
 ### 6. Đề xuất khắc phục (Recommendation)
 Xóa bỏ thuộc tính `tabIndex={1}` khỏi thẻ `<button type="submit">` trong `Login.jsx:56` để trình duyệt tuân theo thứ tự DOM tự nhiên từ trên xuống dưới.
+
+---
+- **GitHub Issue Link:** [Issue #32](https://github.com/denny188/CSC13003-eshop/issues/32)

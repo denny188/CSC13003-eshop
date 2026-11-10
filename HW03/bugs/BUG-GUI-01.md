@@ -35,3 +35,6 @@ Theo đặc tả `FR-21 (Tiêu chuẩn Giao diện Chung)`: *"Nhất quán ngôn
 
 ### 6. Đề xuất khắc phục (Recommendation)
 Đổi nhãn `<label>` thành `"Email *"` và văn bản trong nút `<button type="submit">` thành `"Đăng nhập"`.
+
+---
+- **GitHub Issue Link:** [Issue #29](https://github.com/denny188/CSC13003-eshop/issues/29)

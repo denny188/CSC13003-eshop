@@ -33,3 +33,6 @@
 ### 6. Đề xuất khắc phục (Recommendation)
 - Tại `Register.jsx:64, 72`: Đổi `text-gray-400` thành `text-gray-600` và đổi `bg-red-500 hover:bg-red-600` thành `bg-blue-600 hover:bg-blue-700`.
 - Tại `ForgotPassword.jsx:90-95`: Đổi nút `"Đặt lại mật khẩu"` sang `bg-blue-600 hover:bg-blue-700` và nút `"← Quay lại"` sang `bg-gray-200 text-gray-800 hover:bg-gray-300`.
+
+---
+- **GitHub Issue Link:** [Issue #30](https://github.com/denny188/CSC13003-eshop/issues/30)

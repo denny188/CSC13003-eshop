@@ -35,3 +35,6 @@ Trên màn hình `/profile` (`Profile.jsx`), có 4 lỗi về hiển thị trạ
 ### 6. Đề xuất khắc phục (Recommendation)
 - Sửa điều kiện tại `Profile.jsx:200` thành `(o.status === "pending" || o.status === "confirmed")`.
 - Bổ sung modal xác nhận trước khi gọi API hủy đơn, thêm icon minh họa cho Empty State, và dùng `<Navigate to="/login" replace />` khi `!user`.
+
+---
+- **GitHub Issue Link:** [Issue #38](https://github.com/denny188/CSC13003-eshop/issues/38)

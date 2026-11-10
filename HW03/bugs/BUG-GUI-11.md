@@ -35,3 +35,6 @@ Có sự mâu thuẫn nghiêm trọng giữa văn bản hướng dẫn trên gia
 ### 6. Đề xuất khắc phục (Recommendation)
 - Tại `Profile.jsx:41`: Sửa regex thành `/^0\d{9,10}$/`.
 - Tại `Register.jsx:15` và `ForgotPassword.jsx:26`: Sửa regex thành `/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/`.
+
+---
+- **GitHub Issue Link:** [Issue #39](https://github.com/denny188/CSC13003-eshop/issues/39)

@@ -33,3 +33,6 @@
 
 ### 6. Đề xuất khắc phục (Recommendation)
 Bổ sung thanh tiến trình `Bước {step} / 2`, thêm `<Link to="/login">← Quay lại đăng nhập</Link>` ở Bước 1, thêm trường `confirmPassword` ở cả 2 form, và sửa độ dài OTP thành 6 chữ số.
+
+---
+- **GitHub Issue Link:** [Issue #37](https://github.com/denny188/CSC13003-eshop/issues/37)
