@@ -67,11 +67,6 @@
     }
   },
   "scope": {
-    "group_exclusion": {
-      "teammate": "Xuân Thu",
-      "teammate_task1_screens": ["FR-06 (Product Detail)", "FR-07 (Shopping Cart)", "FR-08 (Checkout)"],
-      "teammate_task2_flow": "Search -> Product Detail -> Cart -> Coupon -> Checkout"
-    },
     "task1_screens": [
       {
         "id": "S1",
