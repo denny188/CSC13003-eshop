@@ -1,7 +1,7 @@
-# [BUG-GUI-08] Thanh điều hướng (Navbar) vi phạm hàng loạt yêu cầu FR-23: không highlight trang hiện tại, thiếu badge giỏ hàng, nút đăng xuất ghi "Thoát", thiếu Breadcrumb và dùng `dangerouslySetInnerHTML`
+# [BUG-GUI-08] Thanh điều hướng (Header/Navbar) & Liên kết điều hướng vi phạm FR-23: không highlight trang hiện tại, thiếu badge giỏ hàng, nút đăng xuất ghi "Thoát", reload ở `Login.jsx:50` và dùng `dangerouslySetInnerHTML`
 
-- **Khía cạnh Giao diện (Interface Aspect):** `IA-03: Navigation` & `IA-04: Feedback / state` (`FR-23`)
-- **Màn hình bị ảnh hưởng:** Thanh điều hướng chung `Header` (`frontend-web/src/App.jsx:15-40`) và toàn bộ các trang con (`/register`, `/login`, `/forgot-password`, `/profile`)
+- **Khía cạnh Giao diện (Interface Aspect):** `IA-01: General UI standards`, `IA-03: Navigation` & `IA-04: Feedback / state` (`FR-23`)
+- **Màn hình bị ảnh hưởng:** Thanh điều hướng chung `Header` (`frontend-web/src/App.jsx:15-40`), liên kết Quên mật khẩu trên `/login` (`frontend-web/src/pages/Login.jsx:50`), và toàn bộ các trang con (`/register`, `/login`, `/forgot-password`, `/profile`)
 - **Mức độ nghiêm trọng (Severity):** **High** (Vi phạm đồng thời cả 4 yêu cầu của `FR-23` và chứa lỗi hiển thị DOM/XSS trên Header)
 - **Mã Checklist liên quan:** `CHK-023`, `CHK-024`, `CHK-025`, `CHK-026`, `CHK-029`, `CHK-046`, `CHK-055`
 
@@ -17,8 +17,8 @@
 6. **Dùng `dangerouslySetInnerHTML` và không giới hạn chiều rộng tên người dùng trên Header (`CHK-046`, `CHK-055`):** Dòng 27 dùng `<span dangerouslySetInnerHTML={{ __html: 'Chào, ' + user.name }} />` vừa gây vỡ bố cục Header khi tên dài hoặc chứa ký tự `<`, vừa tạo lỗ hổng Stored XSS.
 
 ### 2. Các bước tái hiện (Steps to Reproduce)
-1. Đăng nhập tài khoản `test@eshop.com` / `Test1234!`, thêm 1 sản phẩm vào giỏ hàng, sau đó chuyển sang trang `/profile`.
-2. Quan sát thanh Navbar màu xanh dương phía trên cùng của trang.
+1. Đăng nhập tài khoản kiểm thử (`23120233@student.hcmus.edu.vn`), cập nhật `Họ Tên` chứa chuỗi dài và thẻ HTML `<b>` (hoặc ký tự `<`), bấm `"Thêm vào giỏ"` trên Trang chủ (`/`), sau đó chuyển sang `/profile` qua SPA link.
+2. Quan sát thanh Navbar màu xanh dương phía trên cùng của trang và kiểm tra liên kết `"Quên mật khẩu?"` tại `/login` (`Login.jsx:50`).
 
 ### 3. Kết quả mong đợi (Expected Result)
 - Mục trang hiện tại được highlight nổi bật; link `"Giỏ hàng"` có badge số lượng (ví dụ `Giỏ hàng (1)`); nút đăng xuất có nhãn `"Đăng xuất"`; có thanh Breadcrumb dưới Header; tên người dùng được render thuần bằng `{user.name}` kèm lớp `truncate max-w-xs`.

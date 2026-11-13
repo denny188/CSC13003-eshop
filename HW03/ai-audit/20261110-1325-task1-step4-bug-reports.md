@@ -1,7 +1,7 @@
 # AI Audit Log — Task 1 (Step 1.4): Structured GUI Bug Reports
 
 - **Declaration:** I use AI tools for the following tasks.
-- **Name of the AI tool:** Antigravity Agent (Gemini / Claude) with Skill `hw03-gui-checklist`
+- **Name of the AI tool:** Antigravity Agent (with Skill `hw03-gui-checklist`)
 - **Date and time:** 2026-11-10 13:25:00 +07:00
 - **Task / Step:** Task 1 — Step 1.4: Consolidate the 41 failed checklist items into 12 structured GUI Bug Reports (`HW03/bugs/BUG-GUI-01.md` → `BUG-GUI-12.md`) with embedded screenshots and code references.
 

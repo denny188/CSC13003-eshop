@@ -1,7 +1,7 @@
 # AI Audit Log — Task 1 (Step 1.3): GUI Checklist Execution & Screenshot Evidence
 
 - **Declaration:** I use AI tools for the following tasks.
-- **Name of the AI tool:** Antigravity Agent (Gemini / Claude) with Skill `hw03-gui-checklist` + Chrome Automation (Playwright)
+- **Name of the AI tool:** Antigravity Agent (with Skill `hw03-gui-checklist`) + Node.js & Chrome DevTools Protocol (CDP)
 - **Date and time:** 2026-11-10 13:15:00 +07:00
 - **Task / Step:** Task 1 — Step 1.3: Execute the 55-item GUI Checklist against the live EShop SUT (`http://localhost:5173`), record Pass/Fail status and detailed Notes, capture screenshots for Failed items with student overlay (`23120233@student.hcmus.edu.vn`), and generate `HW03_GUI_Checklist.xlsx`.
 

@@ -25,7 +25,12 @@ Các kiểm tra mở rộng (do con người bổ sung trong bước AI Gap Revi
 - Bảng đơn hàng bị tràn/bóp nghẹt trên khung nhìn `375px`, căn lề ngược khi bật RTL, và nút Submit không bị khóa khi gửi API.
 
 ### 5. Ảnh chụp màn hình minh chứng (Screenshot)
-![BUG-GUI-12: Bảng đơn hàng trên màn hình 375px và kiểm tra RTL / Dark mode](../task1-gui/screenshots/BUG-GUI-12_responsive_a11y.png)
+- **Màn hình hẹp `375px` (`CHK-043`):**
+![BUG-GUI-12: Bảng đơn hàng 5 cột bị ép hẹp trên màn hình 375px](../task1-gui/screenshots/BUG-GUI-12_responsive_a11y.png)
+- **Chế độ tối `prefers-color-scheme: dark` (`CHK-042`):**
+![BUG-GUI-12: Giao diện vẫn giữ nền sáng khi bật Dark Mode trên trình duyệt](../task1-gui/screenshots/BUG-GUI-12_dark_mode.png)
+- **Bố cục phải-sang-trái `dir="rtl"` (`CHK-044`):**
+![BUG-GUI-12: Bảng đơn hàng vẫn căn lề text-left cố định trong chế độ RTL](../task1-gui/screenshots/BUG-GUI-12_rtl.png)
 
 ### 6. Đề xuất khắc phục (Recommendation)
 Bọc `<table>` trong `<div className="overflow-x-auto">`, thay `text-left`/`text-right` bằng `text-start`/`text-end`, và bổ sung state `isSubmitting` cho các biểu mẫu.

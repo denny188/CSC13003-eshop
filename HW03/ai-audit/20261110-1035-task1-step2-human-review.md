@@ -1,7 +1,7 @@
 # AI Audit Log — Task 1 (Step 1.2): Critical Human Review & AI Gap Analysis
 
 - **Declaration:** I use AI tools for the following tasks.
-- **Name of the AI tool:** Antigravity Agent (Gemini 4 Argon/ Claude Opus 5.5) with Skill `hw03-gui-checklist`
+- **Name of the AI tool:** Antigravity Agent (with Skill `hw03-gui-checklist`)
 - **Date and time:** 2026-11-10 10:35:00 +07:00
 - **Task / Step:** Task 1 — Step 1.2: Critically review the initial 40-item AI checklist and document 15 human-contributed checklist items (`CHK-041` → `CHK-055`) along with root-cause explanations of why the AI missed them.
 
