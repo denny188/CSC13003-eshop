@@ -37,4 +37,7 @@ Chuyển sang thực hiện Task 3 (Cross-Browser / Cross-Platform) trước:
 
 ## 3. Human Review & Verification Decisions
 
-- **Kiểm chứng của sinh viên:** Sinh viên đã duyệt bảng ma trận đối chiếu 55 mục, xác nhận các điểm dị biệt giữa Blink, Gecko và WebKit, đồng thời nắm rõ quy trình đăng nhập BrowserStack/LambdaTest Live để chụp các ảnh minh chứng toàn màn hình có hiển thị rõ tên trình duyệt, hệ điều hành và địa chỉ `localhost:5173`.
+- **Kiểm chứng của sinh viên:** Sinh viên đã duyệt bảng ma trận đối chiếu 55 mục, cấu hình **LambdaTest UnderPass Tunnel (`MSI-osiexvol3bd`)** và thực thi trực tiếp **2/2 phiên LambdaTest Live** (giới hạn 2 phút/phiên của gói Free Trial):
+  - **Phiên 1/2 — Mozilla Firefox 159 (Windows 11, `1280×800`):** Kiểm tra `http://localhost:5173/login`, xác nhận `Đăng Ký` heading sai (`CHK-009`), hỗn hợp Anh-Việt (`CHK-002`), nút `Sign In` xanh (`CHK-004`), `Tab` nhảy thẳng xuống `Sign In` do `tabIndex={1}` (`CHK-010`), lưu [`TASK3_FIREFOX_WINDOWS_login.png`](../task3-cross-platform/screenshots/TASK3_FIREFOX_WINDOWS_login.png).
+  - **Phiên 2/2 — Apple Safari 17 (macOS Sonoma, `1440×900`):** Kiểm tra `http://localhost:5173/login`, xác nhận dị biệt thực tế khi `Tab` đi vào `Mật khẩu` kèm tooltip `"Fill out this field"` (`CHK-010`), xác nhận ô `Mật khẩu` lộ `plaintext` (`CHK-016`), lưu [`TASK3_SAFARI_MACOS_login.png`](../task3-cross-platform/screenshots/TASK3_SAFARI_MACOS_login.png).
+  - **Cập nhật trung thực (`matrix.md`):** 15/55 hạng mục trên `/login` & Navbar được đánh dấu `4 Passed / 11 Failed` cho cả Firefox 159 và Safari 17; 40/55 hạng mục trên các màn hình chưa kịp mở trong 2 phút được ghi rõ `Not Executed (2-min Trial)`.
